@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Aprovação de Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card">
+        <h1>Verificador de Aprovação</h1>
+        <p>Digite a nota do aluno (de 0 a 10) para saber se ele foi aprovado.</p>
+        
+        <label for="notaInput">Nota do Aluno:</label>
+        <input type="number" id="notaInput" placeholder="Ex: 7.5" min="0" max="10" step="0.1">
+        
+        <button id="verificarBtn">Verificar</button>
+        
+        <p id="resultado"></p>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
