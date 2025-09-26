@@ -1,0 +1,103 @@
+/* Estilo geral do corpo */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Seções de cada loop */
+section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #3498db;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+section h2 code {
+    font-size: 1.5rem;
+}
+
+/* Artigo de cada exemplo */
+.example {
+    margin-top: 25px;
+    border-left: 4px solid #3498db;
+    padding-left: 20px;
+}
+
+.example h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Botões */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Área de Resultado */
+.output {
+    background-color: #ecf0f1;
+    border: 1px dashed #bdc3c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    min-height: 40px;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap; /* Mantém a formatação do texto */
+}
+
+/* Bloco de Código */
+pre {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+code {
+    font-family: "Fira Code", "Consolas", "Monaco", monospace;
+}

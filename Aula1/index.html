@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Loops em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Demonstração de Loops: Do...While, While e For</h1>
+        <p>Clique nos botões para executar os exemplos de cada tipo de loop.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2><code>do...while</code></h2>
+            <p>Executa o bloco de código pelo menos uma vez, e depois repete o loop enquanto a condição for verdadeira.</p>
+
+            <article class="example">
+                <h3>1. Validação de Entrada do Usuário</h3>
+                <button id="doWhileBtn1">Executar</button>
+                <div class="output" id="doWhileOutput1">Resultado...</div>
+                <pre><code>let senhaCorreta = "1234";
+let senhaDigitada;
+do {
+  senhaDigitada = prompt("Senha correta é '1234'. Tente adivinhar:");
+} while (senhaDigitada !== senhaCorreta);
+// Exibe o resultado na tela</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>2. Menu de Opções Interativo</h3>
+                <button id="doWhileBtn2">Executar</button>
+                <div class="output" id="doWhileOutput2">Resultado...</div>
+                <pre><code>let opcao;
+do {
+  opcao = prompt("Escolha uma opção:\\n1. Ver Saldo\\n2. Fazer Transferência\\n3. Sair");
+  // Lógica do menu é exibida no resultado
+} while (opcao !== '3');</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>3. Jogo de Adivinhação de Número</h3>
+                <button id="doWhileBtn3">Executar</button>
+                <div class="output" id="doWhileOutput3">Resultado...</div>
+                <pre><code>const numeroSecreto = 7;
+let palpite;
+do {
+    palpite = parseInt(prompt("Adivinhe o número secreto (entre 1 e 10):"));
+} while (palpite !== numeroSecreto);</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>4. Acumulando Valores Até um Limite</h3>
+                <button id="doWhileBtn4">Executar</button>
+                <div class="output" id="doWhileOutput4">Resultado...</div>
+                <pre><code>let soma = 0;
+let numeroAleatorio;
+do {
+  numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+  soma += numeroAleatorio;
+  // Mostra cada passo no resultado
+} while (soma <= 50);</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>5. Processamento de Itens de um Carrinho</h3>
+                <button id="doWhileBtn5">Executar</button>
+                <div class="output" id="doWhileOutput5">Resultado...</div>
+                <pre><code>let carrinho = ["Maçã", "Banana", "Laranja"];
+do {
+  let item = carrinho.shift(); // Remove o primeiro item
+  // Mostra o item processado
+} while (carrinho.length > 0);</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2><code>while</code></h2>
+            <p>Testa a condição ANTES de cada execução. O bloco pode nunca ser executado.</p>
+
+            <article class="example">
+                <h3>1. Contagem Regressiva</h3>
+                <button id="whileBtn1">Executar</button>
+                <div class="output" id="whileOutput1">Resultado...</div>
+                <pre><code>let contagem = 10;
+while (contagem > 0) {
+  // Mostra a contagem
+  contagem--;
+}</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>2. Percorrendo os Elementos de um Array</h3>
+                <button id="whileBtn2">Executar</button>
+                <div class="output" id="whileOutput2">Resultado...</div>
+                <pre><code>let frutas = ["Maçã", "Uva", "Pera", "Abacaxi"];
+let i = 0;
+while (i < frutas.length) {
+  // Mostra cada fruta
+  i++;
+}</code></pre>
+            </article>
+            
+            <article class="example">
+                <h3>3. Simulação de Carregamento</h3>
+                <button id="whileBtn3">Executar</button>
+                <div class="output" id="whileOutput3">Resultado...</div>
+                <pre><code>let progresso = 0;
+while (progresso < 100) {
+    progresso += 10;
+    // Mostra o progresso
+}</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>4. Encontrando o Primeiro Múltiplo de 7</h3>
+                <button id="whileBtn4">Executar</button>
+                <div class="output" id="whileOutput4">Resultado...</div>
+                <pre><code>let numero = 0;
+while (numero % 7 !== 0 || numero === 0) {
+  numero = Math.floor(Math.random() * 100) + 1;
+  // Mostra o número testado
+}</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>5. Consumindo Dados de uma Fila</h3>
+                <button id="whileBtn5">Executar</button>
+                <div class="output" id="whileOutput5">Resultado...</div>
+                <pre><code>let filaAtendimento = ["Cliente A", "Cliente B", "Cliente C"];
+while (filaAtendimento.length > 0) {
+  let clienteAtual = filaAtendimento.shift();
+  // Mostra o cliente atendido
+}</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2><code>for</code></h2>
+            <p>Ideal para quando se sabe o número de iterações. Compacto e poderoso.</p>
+            
+            <article class="example">
+                <h3>1. Tabuada de Multiplicação</h3>
+                <button id="forBtn1">Executar</button>
+                <div class="output" id="forOutput1">Resultado...</div>
+                <pre><code>const numero = 8;
+for (let i = 1; i <= 10; i++) {
+  // Mostra a linha da tabuada
+}</code></pre>
+            </article>
+            
+            <article class="example">
+                <h3>2. Iterando sobre um Array</h3>
+                <button id="forBtn2">Executar</button>
+                <div class="output" id="forOutput2">Resultado...</div>
+                <pre><code>let cores = ["Vermelho", "Verde", "Azul", "Amarelo"];
+for (let i = 0; i < cores.length; i++) {
+  // Mostra a cor e sua posição
+}</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>3. Calculando a Soma dos Primeiros N Números</h3>
+                <button id="forBtn3">Executar</button>
+                <div class="output" id="forOutput3">Resultado...</div>
+                <pre><code>let somaTotal = 0;
+for (let i = 1; i <= 100; i++) {
+  somaTotal += i;
+}
+// Mostra o resultado final</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>4. Encontrando Números Pares em um Intervalo</h3>
+                <button id="forBtn4">Executar</button>
+                <div class="output" id="forOutput4">Resultado...</div>
+                <pre><code>// O incremento do loop é i += 2
+for (let i = 2; i <= 20; i += 2) {
+  // Mostra os números pares
+}</code></pre>
+            </article>
+
+            <article class="example">
+                <h3>5. Iteração Reversa (De Trás para Frente)</h3>
+                <button id="forBtn5">Executar</button>
+                <div class="output" id="forOutput5">Resultado...</div>
+                <pre><code>let countdown = ["Três", "Dois", "Um"];
+for (let i = countdown.length - 1; i >= 0; i--) {
+  // Mostra a contagem regressiva
+}</code></pre>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
